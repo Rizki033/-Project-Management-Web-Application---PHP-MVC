@@ -9,7 +9,7 @@ class Projet {
     private $date_fin;
     private $statut;
 
-    // Getters and Setters
+    
     public function getId() { return $this->id; }
     public function setId($id) { $this->id = $id; }
 
@@ -28,7 +28,7 @@ class Projet {
     public function getStatut() { return $this->statut; }
     public function setStatut($statut) { $this->statut = $statut; }
 
-    // Méthode pour récupérer tous les projets
+
     public static function getAllProjets() {
         $db = Database::getConnection();
         $query = "SELECT * FROM projets";
@@ -37,7 +37,7 @@ class Projet {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // Méthode pour ajouter un projet
+
     public function ajouterProjet() {
         $db = Database::getConnection();
         $query = "INSERT INTO projets (titre, description, date_debut, date_fin, statut) 
