@@ -3,18 +3,17 @@ require_once 'model/projet.php';
 require_once 'model/utilisateur.php';
 
 class ProjetController {
-    // Afficher la liste des projets
+  
     public function listProjets() {
         $projets = Projet::getAllProjets();
         require 'view/projetsList.php';
     }
 
-    // Formulaire d'ajout de projet
+  
     public function showAddProjetForm() {
         require 'view/projetAdd.php';
     }
 
-    // Traitement de l'ajout de projet
     public function addProjet() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $projet = new Projet();
