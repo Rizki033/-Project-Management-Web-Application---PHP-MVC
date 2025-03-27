@@ -1,9 +1,8 @@
 <?php
-// Autoload controllers
+
 require_once 'controller/ProjetController.php';
 require_once 'controller/UtilisateurController.php';
 
-// Basic routing
 $action = $_GET['action'] ?? 'listProjets';
 
 $projetController = new ProjetController();
